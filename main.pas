@@ -76,11 +76,15 @@ end;
 procedure Tfrm_logout.OnClickButton(Sender: TObject);
 begin
 	if Sender = btnCancel then
-		Close
+	begin
+		Close;
+	end
 	else {btnOk}
+	begin
 		SaveConfig;
 		ExecuteCommand;
 		Close;
+	end;
 end;
 
 procedure Tfrm_logout.OnActionsClick(Sender: TObject);
