@@ -78,8 +78,8 @@ begin
 	if Sender = btnCancel then
 		Close
 	else {btnOk}
-		ExecuteCommand;
 		SaveConfig;
+		ExecuteCommand;
 		Close;
 end;
 
