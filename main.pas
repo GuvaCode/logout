@@ -44,11 +44,14 @@ var
 begin
 	AssignFile (loadFile,GetAppConfigFile(false));
 	try
-	  reset (loadFile);
-	  read (loadFile, data);
-	  CloseFile (loadFile);
+		reset (loadFile);
+		read (loadFile, data);
+		CloseFile (loadFile);
 	  except
-	  writeln ('Error al leer el archivo de configuración.');
+     on e : exception do
+     begin
+        writeln ('Error al leer el archivo de configuración: ' + e.Message);
+	 end;
 	end;
 
 	index := cbSession.Items.IndexOf (data);
@@ -69,7 +72,10 @@ begin
 		writeln (saveFile, cbSession.Items[cbSession.ItemIndex]);
 		CloseFile (saveFile);
 		except
-		writeln ('Error al escribir el archivo de configuración.');
+      on e : exception do
+      begin
+         write ('Error al escribir el archivo de configuración: ' + e.Message);
+		end;
 	end;
 end;
 
