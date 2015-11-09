@@ -28,8 +28,8 @@ object frm_logout: Tfrm_logout
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 112
-    ClientWidth = 158
+    ClientHeight = 111
+    ClientWidth = 156
     ItemIndex = 0
     Items.Strings = (
       'Apagar'
@@ -43,8 +43,8 @@ object frm_logout: Tfrm_logout
     object cbSession: TComboBox
       Left = 6
       Height = 22
-      Top = 90
-      Width = 146
+      Top = 89
+      Width = 144
       Enabled = False
       ItemHeight = 0
       ItemIndex = 3
@@ -55,6 +55,7 @@ object frm_logout: Tfrm_logout
         'Openbox'
         'PekWM'
       )
+      Style = csDropDownList
       TabOrder = 4
       Text = 'Openbox'
     end
