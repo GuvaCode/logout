@@ -11,6 +11,7 @@ object frm_logout: Tfrm_logout
   DockSite = True
   FormStyle = fsSystemStayOnTop
   OnCreate = FormCreate
+  OnShow = FormShow
   Position = poDesktopCenter
   ShowInTaskBar = stNever
   LCLVersion = '1.4.4.0'
@@ -42,8 +43,8 @@ object frm_logout: Tfrm_logout
     TabOrder = 0
     object cbSession: TComboBox
       Left = 6
-      Height = 22
-      Top = 89
+      Height = 23
+      Top = 88
       Width = 144
       Enabled = False
       ItemHeight = 0

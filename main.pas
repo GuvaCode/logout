@@ -9,18 +9,23 @@ uses
 	StdCtrls, ExtCtrls, Buttons, Process;
 
 type
-	Tfrm_logout = class(TForm)
+
+	{ Tfrm_logout }
+
+ Tfrm_logout = class(TForm)
 						btnOk: TButton;
 						btnCancel: TButton;
 						ActionsGroup: TRadioGroup;
 						cbSession: TComboBox;
 
 	procedure FormCreate(Sender: TObject);
+	procedure FormShow(Sender: TObject);
 	procedure OnClickButton(Sender: TObject);
 	procedure OnActionsClick(Sender: TObject);
 	procedure SaveConfig;
 	procedure LoadConfig;
 	procedure ExecuteCommand;
+   procedure SetRoundShape;
 	end;
 
 var
@@ -34,6 +39,34 @@ implementation
 procedure Tfrm_logout.FormCreate(Sender: TObject);
 begin
 	LoadConfig;
+end;
+
+procedure Tfrm_logout.FormShow(Sender: TObject);
+begin
+       SetRoundShape;
+end;
+
+
+procedure Tfrm_logout.SetRoundShape;
+const
+     radioX = 14;
+     radioY = 14;
+var
+   bitmap: TBitmap;
+begin
+   BorderStyle := bsNone;
+   bitmap := TBitmap.Create;
+   bitmap.Monochrome := true;
+   bitmap.Width := Width;
+   bitmap.Height := Height;
+   bitmap.Canvas.Brush.Color := clBlack;
+   bitmap.Canvas.FillRect (0, 0, Width, Height);
+   bitmap.Canvas.Brush.Color := clWhite;
+   bitmap.Canvas.RoundRect (0, 0, Width, Height, radioX, radioY);
+
+   SetShape (bitmap);
+   bitmap.Free;
+
 end;
 
 procedure Tfrm_logout.LoadConfig;
