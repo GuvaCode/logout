@@ -13,12 +13,13 @@ type
 	{ Tfrm_logout }
 
  Tfrm_logout = class(TForm)
-						btnOk: TButton;
-						btnCancel: TButton;
+				 btnOK: TBitBtn;
 						ActionsGroup: TRadioGroup;
+						btnCancel: TBitBtn;
 						cbSession: TComboBox;
 
-	procedure FormCreate(Sender: TObject);
+	procedure btnOK1Click(Sender: TObject);
+ procedure FormCreate(Sender: TObject);
 	procedure FormShow(Sender: TObject);
 	procedure OnClickButton(Sender: TObject);
 	procedure OnActionsClick(Sender: TObject);
@@ -35,11 +36,16 @@ implementation
 
 {$R *.lfm}
 
+procedure Tfrm_logout.btnOK1Click(Sender: TObject);
+begin
+
+end;
 
 procedure Tfrm_logout.FormCreate(Sender: TObject);
 begin
 	LoadConfig;
 end;
+
 
 procedure Tfrm_logout.FormShow(Sender: TObject);
 begin
