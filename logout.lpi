@@ -58,7 +58,7 @@
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
-            <Filename Value="logout"/>
+            <Filename Value="logout.elf"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>

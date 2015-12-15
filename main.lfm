@@ -1,13 +1,13 @@
 object frm_logout: Tfrm_logout
-  Left = 1008
-  Height = 187
-  Top = 156
-  Width = 175
+  Left = 669
+  Height = 186
+  Top = 262
+  Width = 200
   BorderIcons = []
   BorderStyle = bsNone
   Caption = 'logout'
-  ClientHeight = 187
-  ClientWidth = 175
+  ClientHeight = 186
+  ClientWidth = 200
   DockSite = True
   FormStyle = fsSystemStayOnTop
   OnCreate = FormCreate
@@ -19,7 +19,7 @@ object frm_logout: Tfrm_logout
     Left = 8
     Height = 136
     Top = 8
-    Width = 160
+    Width = 184
     AutoFill = True
     Caption = 'Acciones'
     ChildSizing.LeftRightSpacing = 6
@@ -29,8 +29,8 @@ object frm_logout: Tfrm_logout
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 119
-    ClientWidth = 156
+    ClientHeight = 121
+    ClientWidth = 178
     ItemIndex = 0
     Items.Strings = (
       'Apagar'
@@ -43,9 +43,9 @@ object frm_logout: Tfrm_logout
     TabOrder = 0
     object cbSession: TComboBox
       Left = 6
-      Height = 23
-      Top = 96
-      Width = 144
+      Height = 21
+      Top = 100
+      Width = 166
       Enabled = False
       ItemHeight = 0
       ItemIndex = 3
@@ -65,7 +65,7 @@ object frm_logout: Tfrm_logout
     Left = 8
     Height = 30
     Top = 152
-    Width = 75
+    Width = 88
     Caption = '&Aceptar'
     GlyphShowMode = gsmSystem
     Kind = bkOK
@@ -74,10 +74,10 @@ object frm_logout: Tfrm_logout
     TabOrder = 1
   end
   object btnCancel: TBitBtn
-    Left = 93
+    Left = 104
     Height = 30
     Top = 152
-    Width = 75
+    Width = 88
     Cancel = True
     Caption = '&Cancelar'
     Default = True
