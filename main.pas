@@ -158,7 +158,8 @@ begin
 				'i3'      : RunCommand ('i3-msg', ['exit'], output);
 				'JWM'     : RunCommand ('jwm', ['-exit'], output);
 				'Openbox' : RunCommand ('openbox', ['--exit'], output);
-				'PekWM'   : RunCommand ('killall', ['-9', 'peakwm'], output);
+				'PekWM'   : RunCommand ('killall', ['-9', 'pekwm'], output);
+				'IceWM'   : RunCommand ('killall', ['-QUIT', 'icewm'], output);
 			end;
 	  end;
 end;

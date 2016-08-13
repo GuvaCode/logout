@@ -14,7 +14,7 @@ object frm_logout: Tfrm_logout
   OnShow = FormShow
   Position = poDesktopCenter
   ShowInTaskBar = stNever
-  LCLVersion = '1.4.4.0'
+  LCLVersion = '1.6.0.4'
   object ActionsGroup: TRadioGroup
     Left = 8
     Height = 136
@@ -30,7 +30,7 @@ object frm_logout: Tfrm_logout
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 121
-    ClientWidth = 178
+    ClientWidth = 180
     ItemIndex = 0
     Items.Strings = (
       'Apagar'
@@ -43,22 +43,21 @@ object frm_logout: Tfrm_logout
     TabOrder = 0
     object cbSession: TComboBox
       Left = 6
-      Height = 21
-      Top = 100
-      Width = 166
+      Height = 23
+      Top = 98
+      Width = 168
       Enabled = False
       ItemHeight = 0
-      ItemIndex = 3
       Items.Strings = (
         'Fluxbox'
         'i3'
         'JWM'
         'Openbox'
         'PekWM'
+        'IceWM'
       )
       Style = csDropDownList
       TabOrder = 4
-      Text = 'Openbox'
     end
   end
   object btnOK: TBitBtn
